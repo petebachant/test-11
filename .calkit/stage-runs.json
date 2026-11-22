@@ -1,0 +1,21 @@
+{
+  "plot-raw": {
+    "start_time": "2026-11-22T16:11:12.975000",
+    "end_time": "2026-11-22T16:11:20.223000",
+    "environment": "py",
+    "git_rev": "058d093551be3627097cc762efa719832b4d03f5",
+    "git_dirty": true,
+    "dvc_lock_hash": "sha256:f723d723b8e3828416c3d4074817d92b7c59b8b329f0247692ca2e1011b26a5e",
+    "calkit_version": "0.52.3.dev34+g21c758431",
+    "calkit_git_rev": "21c758431668a04872f02b5ff95f7afd9174dcb1",
+    "system": {
+      "machine_id": "33C4DDA7-7423-5B6A-B86F-EA6859EB058E",
+      "os": "Darwin",
+      "os_version": "27.2.0",
+      "machine": "arm64",
+      "processor": "arm",
+      "cpu_count": 10,
+      "memory_gb": 64.0
+    }
+  }
+}

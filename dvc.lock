@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  plot-raw:
+    cmd: calkit xenv -n py --no-check -- python scripts/plot-raw.py
+    deps:
+    - path: data/raw.csv
+      hash: md5
+      md5: f40381f537f7c1b7a48b35fd2172913b
+      size: 16
+    - path: scripts/plot-raw.py
+      hash: md5
+      md5: adc096c18ac2d966558de90e9d3f710f
+      size: 256
+    - path: uv.lock
+      hash: md5
+      md5: cc93da2db78da13b8d6af40d94ee955a
+      size: 126292
+    outs:
+    - path: figures/raw.png
+      hash: md5
+      md5: 27ba01a2f17ec5907006d4c5699a899c
+      size: 14049
