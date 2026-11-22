@@ -1,0 +1,4 @@
+[core]
+    remote = calkit
+['remote "calkit"']
+    url = ck://petebachant/test-11

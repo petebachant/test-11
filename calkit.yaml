@@ -23,3 +23,7 @@ figures:
   - path: figures/raw.png
     title: Raw
     stage: plot-raw
+git_repo_url: https://github.com/petebachant/test-11
+owner: petebachant
+name: test-11
+hub: https://calkit.io
