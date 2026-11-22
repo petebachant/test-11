@@ -19,6 +19,13 @@ pipeline:
         - data/raw.csv
       outputs:
         - figures/raw.png
+    fade:
+      kind: jupyter-notebook
+      environment: py
+      inputs:
+        - data/decay.csv
+      notebook_path: notebooks/fade.ipynb
+      cleaned_ipynb_storage: git
 figures:
   - path: figures/raw.png
     title: Raw
