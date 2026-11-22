@@ -1,0 +1,7 @@
+datasets:
+  - path: data/raw.csv
+    title: The raw data
+    description: I collected this myself.
+    created_by:
+      - email: petebachant@gmail.com
+        name: Pete Bachant
