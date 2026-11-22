@@ -30,6 +30,9 @@ figures:
   - path: figures/raw.png
     title: Raw
     stage: plot-raw
+  - path: frog.jpg
+    imported_from:
+      description: overleaf.com
 git_repo_url: https://github.com/petebachant/test-11
 owner: petebachant
 name: test-11
