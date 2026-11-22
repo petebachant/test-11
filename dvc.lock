@@ -21,13 +21,15 @@ stages:
       md5: 27ba01a2f17ec5907006d4c5699a899c
       size: 14049
   fade:
-    cmd: calkit nb execute --environment py --no-check --to html 
+    cmd: calkit nb execute --environment py --no-check --to html --output 
+      "kind=figure,cell_id=plot,variable_name=fig,output_path=figures/absorbance.pdf"
+      --output "kind=value,cell_id=later,variable_name=k899" 
       "notebooks/fade.ipynb"
     deps:
     - path: .calkit/notebooks/cleaned/notebooks/fade.ipynb
       hash: md5
-      md5: 7782881b749e9b45e89c19a9fb46031a
-      size: 3131
+      md5: fd9ada733968131a8425c5f26571a01e
+      size: 3159
     - path: data/decay.csv
       hash: md5
       md5: 06d03cbdd06aa89af21da50952291bac
@@ -39,9 +41,53 @@ stages:
     outs:
     - path: .calkit/notebooks/executed/notebooks/fade.ipynb
       hash: md5
-      md5: 86cd1f83d7b3ccda1801ede53a117286
-      size: 69909
+      md5: 8fba6892e76016b9cb2ff6914640263f
+      size: 69980
     - path: .calkit/notebooks/html/notebooks/fade.html
       hash: md5
-      md5: cfa5dd842e75b98e8e3edf042a91c23d
-      size: 345091
+      md5: 45bab903768949ae98572d53cef96866
+      size: 345176
+    - path: .calkit/notebooks/outputs/notebooks/fade.ipynb/values.json
+      hash: md5
+      md5: 2161b44665751eafcd2eafb3d2a13797
+      size: 21
+    - path: figures/absorbance.pdf
+      hash: md5
+      md5: ede8ccc53d2f30c002991c1918713dc4
+      size: 15900
+  main:
+    cmd: calkit latex build -e latex --no-check main.tex
+    deps:
+    - path: .calkit/env-locks/latex.json
+      hash: md5
+      md5: 573f97b4b9ab0f3c2794319622945fc5
+      size: 28490
+    - path: .calkit/notebooks/outputs/notebooks/fade.ipynb/values.json
+      hash: md5
+      md5: 2161b44665751eafcd2eafb3d2a13797
+      size: 21
+    - path: _calkit/values.tex
+      hash: md5
+      md5: ece0def252900c52c58cc121b58cdc11
+      size: 161
+    - path: calkit.sty
+      hash: md5
+      md5: 0869a4a8c673563d0688afd07ce502ea
+      size: 11239
+    - path: frog.jpg
+      hash: md5
+      md5: 665777aa6c7c48794db02f5d69ccc24a
+      size: 97080
+    - path: main.tex
+      hash: md5
+      md5: 32b98aaccf18ca9f31fc2ad627b4c117
+      size: 7211
+    - path: sample.bib
+      hash: md5
+      md5: 0810be99547e6f3295f454437e22fee4
+      size: 244
+    outs:
+    - path: main.pdf
+      hash: md5
+      md5: bd7b79bc0281f37d9da483605df79658
+      size: 272467

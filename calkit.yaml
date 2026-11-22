@@ -9,6 +9,10 @@ environments:
   py:
     kind: uv
     path: pyproject.toml
+  latex:
+    kind: texlive
+    release: 2025
+    description: TeX Live, installed by Calkit.
 pipeline:
   stages:
     plot-raw:
@@ -26,6 +30,22 @@ pipeline:
         - data/decay.csv
       notebook_path: notebooks/fade.ipynb
       cleaned_ipynb_storage: git
+      cell_outputs:
+        - kind: figure
+          cell_id: plot
+          variable_name: fig
+          output_path: figures/absorbance.pdf
+        - kind: value
+          cell_id: later
+          variable_name: k899
+    main:
+      kind: latex
+      target_path: main.tex
+      pdf_storage: dvc
+      environment: latex
+      inputs:
+        - frog.jpg
+        - sample.bib
 figures:
   - path: figures/raw.png
     title: Raw
