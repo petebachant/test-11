@@ -1,0 +1,11 @@
+stages:
+  plot-raw:
+    cmd: calkit xenv -n py --no-check -- python scripts/plot-raw.py
+    deps:
+      - scripts/plot-raw.py
+      - data/raw.csv
+      - uv.lock
+    outs:
+      - figures/raw.png
+    desc: Automatically generated from the 'plot-raw' stage in calkit.yaml. Changes
+      made here will be overwritten.

@@ -5,3 +5,21 @@ datasets:
     created_by:
       - email: petebachant@gmail.com
         name: Pete Bachant
+environments:
+  py:
+    kind: uv
+    path: pyproject.toml
+pipeline:
+  stages:
+    plot-raw:
+      kind: python-script
+      script_path: scripts/plot-raw.py
+      environment: py
+      inputs:
+        - data/raw.csv
+      outputs:
+        - figures/raw.png
+figures:
+  - path: figures/raw.png
+    title: Raw
+    stage: plot-raw
