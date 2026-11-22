@@ -7,5 +7,19 @@ stages:
       - uv.lock
     outs:
       - figures/raw.png
-    desc: Automatically generated from the 'plot-raw' stage in calkit.yaml. Changes
+    desc: Automatically generated from the 'plot-raw' stage in calkit.yaml.
+      Changes made here will be overwritten.
+  fade:
+    cmd: calkit nb execute --environment py --no-check --to html
+      "notebooks/fade.ipynb"
+    deps:
+      - .calkit/notebooks/cleaned/notebooks/fade.ipynb
+      - data/decay.csv
+      - uv.lock
+    outs:
+      - .calkit/notebooks/executed/notebooks/fade.ipynb:
+          cache: true
+      - .calkit/notebooks/html/notebooks/fade.html:
+          cache: true
+    desc: Automatically generated from the 'fade' stage in calkit.yaml. Changes
       made here will be overwritten.

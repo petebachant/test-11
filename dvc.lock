@@ -13,10 +13,35 @@ stages:
       size: 256
     - path: uv.lock
       hash: md5
-      md5: cc93da2db78da13b8d6af40d94ee955a
-      size: 126292
+      md5: faefb35845102252262d74f17d887367
+      size: 211681
     outs:
     - path: figures/raw.png
       hash: md5
       md5: 27ba01a2f17ec5907006d4c5699a899c
       size: 14049
+  fade:
+    cmd: calkit nb execute --environment py --no-check --to html 
+      "notebooks/fade.ipynb"
+    deps:
+    - path: .calkit/notebooks/cleaned/notebooks/fade.ipynb
+      hash: md5
+      md5: 7782881b749e9b45e89c19a9fb46031a
+      size: 3131
+    - path: data/decay.csv
+      hash: md5
+      md5: 06d03cbdd06aa89af21da50952291bac
+      size: 528
+    - path: uv.lock
+      hash: md5
+      md5: faefb35845102252262d74f17d887367
+      size: 211681
+    outs:
+    - path: .calkit/notebooks/executed/notebooks/fade.ipynb
+      hash: md5
+      md5: 86cd1f83d7b3ccda1801ede53a117286
+      size: 69909
+    - path: .calkit/notebooks/html/notebooks/fade.html
+      hash: md5
+      md5: cfa5dd842e75b98e8e3edf042a91c23d
+      size: 345091
