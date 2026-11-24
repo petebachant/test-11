@@ -11,9 +11,11 @@
     "minitoc",
     "notoccite",
     "ntheorem",
+    "oberdiek",
     "placeins",
     "siunitx",
-    "tools"
+    "tools",
+    "ulem"
   ],
   "lock_format": 1,
   "packages": {
@@ -186,6 +188,16 @@
       "revision": 76719,
       "sha512": "5fedc5bd4ac2313c920b23addb5753f6f90ec5def0b9f7e8fa6b31248c01a5246331f0d266d367d806931f61e824925099d9bf61f805f81c21385007f7f832b3",
       "size": 10992
+    },
+    "grfext": {
+      "revision": 77677,
+      "sha512": "9b008a2fa836c6e6bce517bb0b768a9df5e76069c52d360f16458cf57182e40f4cd084fd6ecd8a10a7697981111989190b7d55859688d8f32ae618823b5bfd69",
+      "size": 2328
+    },
+    "grffile": {
+      "revision": 78116,
+      "sha512": "881200bcbf8fe10f5227fde79ced27539f230ac6d7424c92d6bf63670d8ce3c209ee38d722ce341bf896e1d18c52c5db8949bde7c665a0cdf17322faaff1f62d",
+      "size": 3860
     },
     "hycolor": {
       "revision": 77677,
@@ -517,6 +529,11 @@
       "sha512": "221f18caa52a26b6b720c775b78b842bf35b1ee4dca8e6f8b749d6a0414fe15678de971047024ccb25cb504ef2db83fefca0c89ba8de3a08752fa7b58c2477fa",
       "size": 9648
     },
+    "oberdiek": {
+      "revision": 71916,
+      "sha512": "aeb4e0a7cec967e08e29f40bd4033f6d35b6210660e11cfa75a226d132e9997a9ac681729c99c35bc460f0c6a812c7994e489c64ddcb07b12e2434ed56fc8a01",
+      "size": 35540
+    },
     "pdfescape": {
       "revision": 77677,
       "sha512": "c539bed6b18cb6f710d4b2928613d2ea37ce995119455106fd72b1a2803c0cbf869660a8ee5f0ee2063a2fbd85ae9b3e22ba4f55e48a541cab073e98b35bd4e4",
@@ -621,6 +638,11 @@
       "revision": 76708,
       "sha512": "83d87be518e6634c4b62bc5683c2c3618999c92b234f66c74ef836552348a186dc8dd8969885b8562bfc579bf2b871f0e2474c3848981a743fe2a247dd2cee42",
       "size": 47548
+    },
+    "ulem": {
+      "revision": 77677,
+      "sha512": "5469450d580f8fa9df1f41e881ff863ce976993f6a44b72779f41a13b848e28f4e3b03c02279e99f7849baa8487e2b418fcdacd48cd8a9e16723dbf3bed9d05a",
+      "size": 6532
     },
     "unicode-data": {
       "revision": 76413,

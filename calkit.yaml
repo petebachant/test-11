@@ -38,6 +38,9 @@ pipeline:
         - kind: value
           cell_id: later
           variable_name: k899
+        - kind: figure
+          cell_id: arrhenius
+          output_path: figures/ln_k.png
     main:
       kind: latex
       target_path: main.tex
@@ -46,6 +49,7 @@ pipeline:
       inputs:
         - frog.jpg
         - sample.bib
+        - calkit.sty
 figures:
   - path: figures/raw.png
     title: Raw

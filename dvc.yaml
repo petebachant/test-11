@@ -12,7 +12,8 @@ stages:
   fade:
     cmd: calkit nb execute --environment py --no-check --to html --output
       "kind=figure,cell_id=plot,variable_name=fig,output_path=figures/absorbance.pdf"
-      --output "kind=value,cell_id=later,variable_name=k899"
+      --output "kind=value,cell_id=later,variable_name=k899" --output
+      "kind=figure,cell_id=arrhenius,output_path=figures/ln_k.png"
       "notebooks/fade.ipynb"
     deps:
       - .calkit/notebooks/cleaned/notebooks/fade.ipynb
@@ -27,6 +28,8 @@ stages:
           cache: false
       - figures/absorbance.pdf:
           cache: true
+      - figures/ln_k.png:
+          cache: true
     desc: Automatically generated from the 'fade' stage in calkit.yaml. Changes
       made here will be overwritten.
   main:
@@ -35,9 +38,10 @@ stages:
       - main.tex
       - frog.jpg
       - sample.bib
-      - .calkit/env-locks/latex.json
-      - .calkit/notebooks/outputs/notebooks/fade.ipynb/values.json
       - calkit.sty
+      - .calkit/env-locks/latex.json
+      - figures/ln_k.png
+      - .calkit/notebooks/outputs/notebooks/fade.ipynb/values.json
       - _calkit/values.tex
     outs:
       - main.pdf
